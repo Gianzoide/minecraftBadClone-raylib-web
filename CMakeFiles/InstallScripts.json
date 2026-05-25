@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/build_web/cmake_install.cmake",
+		"C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/build_web/raylib/cmake_install.cmake",
+		"C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/build_web/raylib/raylib/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
