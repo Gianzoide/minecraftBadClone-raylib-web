@@ -689,4 +689,8 @@ CMakeFiles/game.dir/main.cpp.o: \
   C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\emscripten\em_types.h \
   C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\emscripten\promise.h \
   C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\emscripten\version.h \
-  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\emscripten\wget.h
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\emscripten\wget.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\emscripten\html5.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\emscripten\console.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\emscripten\eventloop.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\emscripten\html5_webgl.h

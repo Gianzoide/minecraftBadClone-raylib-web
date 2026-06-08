@@ -71,7 +71,7 @@ var ENVIRONMENT_IS_SHELL = !ENVIRONMENT_IS_WEB && !ENVIRONMENT_IS_NODE && !ENVIR
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: C:\Users\gianc\AppData\Local\Temp\tmpubpbuj4e.js
+// include: C:\Users\gianc\AppData\Local\Temp\tmpqqb1yzx_.js
 
   if (!Module['expectedDataFileDownloads']) Module['expectedDataFileDownloads'] = 0;
   Module['expectedDataFileDownloads']++;
@@ -201,25 +201,25 @@ Module['FS_createPath']("/textures", "GUI", true, true);
     }
 
     }
-    loadPackage({"files": [{"filename": "/textures/GUI/hotbar.png", "start": 0, "end": 1872}, {"filename": "/textures/GUI/hotbar_selection.png", "start": 1872, "end": 2318}, {"filename": "/textures/cobblestone.png", "start": 2318, "end": 2518}, {"filename": "/textures/dirt.png", "start": 2518, "end": 2718}, {"filename": "/textures/grass_block_side.png", "start": 2718, "end": 3063}, {"filename": "/textures/grass_block_top.png", "start": 3063, "end": 3361}, {"filename": "/textures/stone.png", "start": 3361, "end": 3518}], "remote_package_size": 3518});
+    loadPackage({"files": [{"filename": "/textures/GUI/hotbar.png", "start": 0, "end": 1872}, {"filename": "/textures/GUI/hotbar_selection.png", "start": 1872, "end": 2318}, {"filename": "/textures/cobblestone.png", "start": 2318, "end": 3099}, {"filename": "/textures/dirt.png", "start": 3099, "end": 3299}, {"filename": "/textures/glass.png", "start": 3299, "end": 3483}, {"filename": "/textures/grass_block_side.png", "start": 3483, "end": 3891}, {"filename": "/textures/grass_block_top.png", "start": 3891, "end": 4189}, {"filename": "/textures/stone.png", "start": 4189, "end": 4412}], "remote_package_size": 4412});
 
   })();
 
-// end include: C:\Users\gianc\AppData\Local\Temp\tmpubpbuj4e.js
-// include: C:\Users\gianc\AppData\Local\Temp\tmp9ksf42f1.js
+// end include: C:\Users\gianc\AppData\Local\Temp\tmpqqb1yzx_.js
+// include: C:\Users\gianc\AppData\Local\Temp\tmpe3n8cfqf.js
 
     // All the pre-js content up to here must remain later on, we need to run
     // it.
     if ((typeof ENVIRONMENT_IS_WASM_WORKER != 'undefined' && ENVIRONMENT_IS_WASM_WORKER) || (typeof ENVIRONMENT_IS_PTHREAD != 'undefined' && ENVIRONMENT_IS_PTHREAD) || (typeof ENVIRONMENT_IS_AUDIO_WORKLET != 'undefined' && ENVIRONMENT_IS_AUDIO_WORKLET)) Module['preRun'] = [];
     var necessaryPreJSTasks = Module['preRun'].slice();
-  // end include: C:\Users\gianc\AppData\Local\Temp\tmp9ksf42f1.js
-// include: C:\Users\gianc\AppData\Local\Temp\tmpkk2g1auz.js
+  // end include: C:\Users\gianc\AppData\Local\Temp\tmpe3n8cfqf.js
+// include: C:\Users\gianc\AppData\Local\Temp\tmp3vj_vd0w.js
 
     if (!Module['preRun']) throw 'Module.preRun should exist because file support used it; did a pre-js delete it?';
     necessaryPreJSTasks.forEach((task) => {
       if (Module['preRun'].indexOf(task) < 0) throw 'All preRun tasks that exist before user pre-js code should remain after; did you replace Module or modify Module.preRun?';
     });
-  // end include: C:\Users\gianc\AppData\Local\Temp\tmpkk2g1auz.js
+  // end include: C:\Users\gianc\AppData\Local\Temp\tmp3vj_vd0w.js
 
 
 var arguments_ = [];
@@ -7706,7 +7706,13 @@ var stringToUTF8Array = (str, heap, outIdx, maxBytesToWrite) => {
 
   var _glBindTexture = _emscripten_glBindTexture;
 
+  var _glBlendEquation = _emscripten_glBlendEquation;
+
+  var _glBlendEquationSeparate = _emscripten_glBlendEquationSeparate;
+
   var _glBlendFunc = _emscripten_glBlendFunc;
+
+  var _glBlendFuncSeparate = _emscripten_glBlendFuncSeparate;
 
   var _glBufferData = _emscripten_glBufferData;
 
@@ -10018,49 +10024,49 @@ function checkIncomingModuleAPI() {
   ignoredModuleProp('onSbrkGrow');
 }
 var ASM_CONSTS = {
-  94690: () => { if (document.fullscreenElement) return 1; },  
- 94736: () => { return Module.canvas.width; },  
- 94768: () => { return parseInt(Module.canvas.style.width); },  
- 94816: () => { document.exitFullscreen(); },  
- 94843: () => { setTimeout(function(){ Module.requestFullscreen(false, false); }, 100); },  
- 94915: () => { if (document.fullscreenElement) return 1; },  
- 94961: () => { return Module.canvas.width; },  
- 94993: () => { return screen.width; },  
- 95018: () => { document.exitFullscreen(); },  
- 95045: ($0) => { const canvasId = UTF8ToString($0); setTimeout(function() { Module.requestFullscreen(false, true); setTimeout(function() { document.querySelector(canvasId).style.width="unset"; }, 100); }, 100); },  
- 95239: () => { return window.innerWidth; },  
- 95265: () => { return window.innerHeight; },  
- 95292: () => { if (document.fullscreenElement) return 1; },  
- 95338: () => { return Module.canvas.width; },  
- 95370: () => { return parseInt(Module.canvas.style.width); },  
- 95418: () => { if (document.fullscreenElement) return 1; },  
- 95464: () => { return Module.canvas.width; },  
- 95496: () => { return screen.width; },  
- 95521: () => { return window.innerWidth; },  
- 95547: () => { return window.innerHeight; },  
- 95574: () => { if (document.fullscreenElement) return 1; },  
- 95620: () => { return Module.canvas.width; },  
- 95652: () => { return screen.width; },  
- 95677: () => { document.exitFullscreen(); },  
- 95704: () => { if (document.fullscreenElement) return 1; },  
- 95750: () => { return Module.canvas.width; },  
- 95782: () => { return parseInt(Module.canvas.style.width); },  
- 95830: () => { document.exitFullscreen(); },  
- 95857: ($0) => { Module.canvas.style.opacity = $0; },  
- 95895: () => { return screen.width; },  
- 95920: () => { return screen.height; },  
- 95946: () => { return window.screenX; },  
- 95973: () => { return window.screenY; },  
- 96000: () => { return window.devicePixelRatio; },  
- 96036: ($0) => { navigator.clipboard.writeText(UTF8ToString($0)); },  
- 96089: ($0) => { Module.canvas.style.cursor = UTF8ToString($0); },  
- 96140: () => { Module.canvas.style.cursor = 'none'; },  
- 96177: ($0, $1, $2, $3) => { try { navigator.getGamepads()[$0].vibrationActuator.playEffect('dual-rumble', { startDelay: 0, duration: $3, weakMagnitude: $1, strongMagnitude: $2 }); } catch (e) { try { navigator.getGamepads()[$0].hapticActuators[0].pulse($2, $3); } catch (e) { } } },  
- 96433: ($0) => { Module.canvas.style.cursor = UTF8ToString($0); },  
- 96484: () => { if (document.pointerLockElement) return 1; },  
- 96531: () => { if (document.fullscreenElement) return 1; },  
- 96577: () => { return window.innerWidth; },  
- 96603: () => { return window.innerHeight; }
+  94786: () => { if (document.fullscreenElement) return 1; },  
+ 94832: () => { return Module.canvas.width; },  
+ 94864: () => { return parseInt(Module.canvas.style.width); },  
+ 94912: () => { document.exitFullscreen(); },  
+ 94939: () => { setTimeout(function(){ Module.requestFullscreen(false, false); }, 100); },  
+ 95011: () => { if (document.fullscreenElement) return 1; },  
+ 95057: () => { return Module.canvas.width; },  
+ 95089: () => { return screen.width; },  
+ 95114: () => { document.exitFullscreen(); },  
+ 95141: ($0) => { const canvasId = UTF8ToString($0); setTimeout(function() { Module.requestFullscreen(false, true); setTimeout(function() { document.querySelector(canvasId).style.width="unset"; }, 100); }, 100); },  
+ 95335: () => { return window.innerWidth; },  
+ 95361: () => { return window.innerHeight; },  
+ 95388: () => { if (document.fullscreenElement) return 1; },  
+ 95434: () => { return Module.canvas.width; },  
+ 95466: () => { return parseInt(Module.canvas.style.width); },  
+ 95514: () => { if (document.fullscreenElement) return 1; },  
+ 95560: () => { return Module.canvas.width; },  
+ 95592: () => { return screen.width; },  
+ 95617: () => { return window.innerWidth; },  
+ 95643: () => { return window.innerHeight; },  
+ 95670: () => { if (document.fullscreenElement) return 1; },  
+ 95716: () => { return Module.canvas.width; },  
+ 95748: () => { return screen.width; },  
+ 95773: () => { document.exitFullscreen(); },  
+ 95800: () => { if (document.fullscreenElement) return 1; },  
+ 95846: () => { return Module.canvas.width; },  
+ 95878: () => { return parseInt(Module.canvas.style.width); },  
+ 95926: () => { document.exitFullscreen(); },  
+ 95953: ($0) => { Module.canvas.style.opacity = $0; },  
+ 95991: () => { return screen.width; },  
+ 96016: () => { return screen.height; },  
+ 96042: () => { return window.screenX; },  
+ 96069: () => { return window.screenY; },  
+ 96096: () => { return window.devicePixelRatio; },  
+ 96132: ($0) => { navigator.clipboard.writeText(UTF8ToString($0)); },  
+ 96185: ($0) => { Module.canvas.style.cursor = UTF8ToString($0); },  
+ 96236: () => { Module.canvas.style.cursor = 'none'; },  
+ 96273: ($0, $1, $2, $3) => { try { navigator.getGamepads()[$0].vibrationActuator.playEffect('dual-rumble', { startDelay: 0, duration: $3, weakMagnitude: $1, strongMagnitude: $2 }); } catch (e) { try { navigator.getGamepads()[$0].hapticActuators[0].pulse($2, $3); } catch (e) { } } },  
+ 96529: ($0) => { Module.canvas.style.cursor = UTF8ToString($0); },  
+ 96580: () => { if (document.pointerLockElement) return 1; },  
+ 96627: () => { if (document.fullscreenElement) return 1; },  
+ 96673: () => { return window.innerWidth; },  
+ 96699: () => { return window.innerHeight; }
 };
 function SetCanvasIdJs(out,outSize) { var canvasId = "#" + Module.canvas.id; stringToUTF8(canvasId, out, outSize); }
 function __asyncjs__RequestClipboardData() { return Asyncify.handleAsync(async () => { if (navigator.clipboard && window.isSecureContext) { let items = await navigator.clipboard.read(); for (const item of items) { if (item.types.includes("text/plain")) { const blob = await item.getType("text/plain"); const text = await blob.text(); window._lastClipboardString = text; } else if (item.types.find(t => t.startsWith("image/"))) { const blob = await item.getType(item.types.find(t => t.startsWith("image/"))); const bitmap = await createImageBitmap(blob); const canvas = document.createElement('canvas'); canvas.width = bitmap.width; canvas.height = bitmap.height; const ctx = canvas.getContext('2d'); ctx.drawImage(bitmap, 0, 0); const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height).data; window._lastImgWidth = canvas.width; window._lastImgHeight = canvas.height; window._lastImgData = imgData; } } } else console.warn("Clipboard read() requires HTTPS/Localhost"); }); }
@@ -10632,7 +10638,13 @@ var wasmImports = {
   /** @export */
   glBindTexture: _glBindTexture,
   /** @export */
+  glBlendEquation: _glBlendEquation,
+  /** @export */
+  glBlendEquationSeparate: _glBlendEquationSeparate,
+  /** @export */
   glBlendFunc: _glBlendFunc,
+  /** @export */
+  glBlendFuncSeparate: _glBlendFuncSeparate,
   /** @export */
   glBufferData: _glBufferData,
   /** @export */

@@ -667,4 +667,6 @@ CMakeFiles/game.dir/rendering/redering.cpp.o: \
   C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\raylib\src\raymath.h \
   C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\list \
   C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\rendering\..\usefullFunc_cpp\usefullFunc.h \
-  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\raylib\src\rlgl.h
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\raylib\src\rlgl.h \
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\rendering\..\blocks.h \
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\rendering\..\camera_cpp\camera.h

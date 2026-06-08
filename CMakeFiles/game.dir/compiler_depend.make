@@ -3342,11 +3342,15 @@ CMakeFiles/game.dir/main.cpp.o: C:/Users/gianc/source/repos/CMakeProjectRaylib_T
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/compat/time.h \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/compat/xlocale.h \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h \
+  C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/console.h \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/em_asm.h \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/em_js.h \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/em_macros.h \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/em_types.h \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h \
+  C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/eventloop.h \
+  C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/html5.h \
+  C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/html5_webgl.h \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/promise.h \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/version.h \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/wget.h \
@@ -6021,6 +6025,7 @@ CMakeFiles/game.dir/rendering/GUI_cpp/GUI.cpp.o: C:/Users/gianc/source/repos/CMa
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/istream \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/iterator \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/limits \
+  C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/list \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/locale \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/math.h \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/memory \
@@ -6096,6 +6101,9 @@ CMakeFiles/game.dir/rendering/GUI_cpp/GUI.cpp.o: C:/Users/gianc/source/repos/CMa
   C:/Users/gianc/emsdk/upstream/lib/clang/23/include/stddef.h \
   C:/Users/gianc/emsdk/upstream/lib/clang/23/include/stdint.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/raylib/src/raylib.h \
+  C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/raylib/src/raymath.h \
+  C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/chunk_cpp/chunk.h \
+  C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/Entity_cpp/Entity.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/rendering/GUI_cpp/GUI.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/rendering/GUI_cpp/hotBar.h
 
@@ -6767,6 +6775,7 @@ CMakeFiles/game.dir/rendering/GUI_cpp/hotBar.cpp.o: C:/Users/gianc/source/repos/
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/raylib/src/raymath.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/chunk_cpp/chunk.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/Entity_cpp/Entity.h \
+  C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/blocks.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/chunk_cpp/chunk.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/rendering/redering.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/rendering/GUI_cpp/GUI.h \
@@ -7439,6 +7448,8 @@ CMakeFiles/game.dir/rendering/redering.cpp.o: C:/Users/gianc/source/repos/CMakeP
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/raylib/src/raylib.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/raylib/src/raymath.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/raylib/src/rlgl.h \
+  C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/blocks.h \
+  C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/camera_cpp/camera.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/chunk_cpp/chunk.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/usefullFunc_cpp/usefullFunc.h
 
@@ -9106,6 +9117,8 @@ C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__split_bu
 
 C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__memory/pointer_traits.h:
 
+C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/eventloop.h:
+
 C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__memory/raw_storage_iterator.h:
 
 C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/aligned_union.h:
@@ -9139,6 +9152,8 @@ C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__new/exce
 C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__new/global_new_delete.h:
 
 C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/lazy.h:
+
+C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/html5.h:
 
 C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__new/interference_size.h:
 
@@ -9255,6 +9270,8 @@ C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_tra
 C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/is_always_bitcastable.h:
 
 C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/promote.h:
+
+C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/html5_webgl.h:
 
 C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/is_assignable.h:
 
@@ -9597,6 +9614,8 @@ C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__random/w
 C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/numeric:
 
 C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/rendering/redering.h:
+
+C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/console.h:
 
 C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/em_js.h:
 

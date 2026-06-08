@@ -669,5 +669,6 @@ CMakeFiles/game.dir/rendering/GUI_cpp/hotBar.cpp.o: \
   C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\rendering\GUI_cpp\..\..\chunk_cpp\chunk.h \
   C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\raylib\src\raymath.h \
   C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\list \
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\rendering\GUI_cpp\..\..\blocks.h \
   C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\rendering\GUI_cpp\..\..\Entity_cpp\Entity.h \
   C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\rendering\GUI_cpp\..\..\Entity_cpp\..\chunk_cpp\chunk.h
