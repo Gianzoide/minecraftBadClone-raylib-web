@@ -7448,10 +7448,13 @@ CMakeFiles/game.dir/rendering/redering.cpp.o: C:/Users/gianc/source/repos/CMakeP
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/raylib/src/raylib.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/raylib/src/raymath.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/raylib/src/rlgl.h \
+  C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/chunk_cpp/chunk.h \
+  C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/Entity_cpp/Entity.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/blocks.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/camera_cpp/camera.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/chunk_cpp/chunk.h \
-  C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/usefullFunc_cpp/usefullFunc.h
+  C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/usefullFunc_cpp/usefullFunc.h \
+  C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/rendering/redering.h
 
 CMakeFiles/game.dir/usefullFunc_cpp/usefullFunc.cpp.o: C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/usefullFunc_cpp/usefullFunc.cpp \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h \
