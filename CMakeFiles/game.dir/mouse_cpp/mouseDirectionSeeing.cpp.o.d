@@ -677,4 +677,7 @@ CMakeFiles/game.dir/mouse_cpp/mouseDirectionSeeing.cpp.o: \
   C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\float.h \
   C:\Users\gianc\emsdk\upstream\lib\clang\23\include\__float_header_macro.h \
   C:\Users\gianc\emsdk\upstream\lib\clang\23\include\__float_float.h \
-  C:\Users\gianc\emsdk\upstream\lib\clang\23\include\__float_infinity_nan.h
+  C:\Users\gianc\emsdk\upstream\lib\clang\23\include\__float_infinity_nan.h \
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\mouse_cpp\..\movement_cpp\movement.h \
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\mouse_cpp\..\movement_cpp\..\camera_cpp\camera.h \
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\mouse_cpp\..\movement_cpp\..\Entity_cpp\Entity.h

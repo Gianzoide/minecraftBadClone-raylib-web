@@ -663,4 +663,11 @@ CMakeFiles/game.dir/camera_cpp/camera.cpp.o: \
   C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\print \
   C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\unistd.h \
   C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\camera_cpp\camera.h \
-  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\raylib\src\raylib.h
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\raylib\src\raylib.h \
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\camera_cpp\..\movement_cpp\movement.h \
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\raylib\src\raymath.h \
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\camera_cpp\..\movement_cpp\..\camera_cpp\camera.h \
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\camera_cpp\..\movement_cpp\..\Entity_cpp\Entity.h \
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\camera_cpp\..\movement_cpp\..\Entity_cpp\..\chunk_cpp\chunk.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\list \
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\camera_cpp\..\usefullFunc_cpp\usefullFunc.h

@@ -1912,6 +1912,7 @@ CMakeFiles/game.dir/camera_cpp/camera.cpp.o: C:/Users/gianc/source/repos/CMakePr
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/istream \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/iterator \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/limits \
+  C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/list \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/locale \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/math.h \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/memory \
@@ -1986,8 +1987,14 @@ CMakeFiles/game.dir/camera_cpp/camera.cpp.o: C:/Users/gianc/source/repos/CMakePr
   C:/Users/gianc/emsdk/upstream/lib/clang/23/include/stdarg.h \
   C:/Users/gianc/emsdk/upstream/lib/clang/23/include/stddef.h \
   C:/Users/gianc/emsdk/upstream/lib/clang/23/include/stdint.h \
+  C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/chunk_cpp/chunk.h \
+  C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/Entity_cpp/Entity.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/camera_cpp/camera.h \
-  C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/raylib/src/raylib.h
+  C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/movement_cpp/movement.h \
+  C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/usefullFunc_cpp/usefullFunc.h \
+  C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/camera_cpp/camera.h \
+  C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/raylib/src/raylib.h \
+  C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/raylib/src/raymath.h
 
 CMakeFiles/game.dir/chunk_cpp/chunk.cpp.o: C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/chunk_cpp/chunk.cpp \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h \
@@ -2134,6 +2141,7 @@ CMakeFiles/game.dir/chunk_cpp/chunk.cpp.o: C:/Users/gianc/source/repos/CMakeProj
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__charconv/traits.h \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__chrono/convert_to_timespec.h \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__chrono/duration.h \
+  C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__chrono/file_clock.h \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__chrono/high_resolution_clock.h \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__chrono/steady_clock.h \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__chrono/system_clock.h \
@@ -2432,6 +2440,8 @@ CMakeFiles/game.dir/chunk_cpp/chunk.cpp.o: C:/Users/gianc/source/repos/CMakeProj
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__thread/poll_with_backoff.h \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__thread/support.h \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__thread/support/pthread.h \
+  C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__thread/this_thread.h \
+  C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__thread/thread.h \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__tuple/find_index.h \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__tuple/ignore.h \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__tuple/make_tuple_types.h \
@@ -2600,6 +2610,7 @@ CMakeFiles/game.dir/chunk_cpp/chunk.cpp.o: C:/Users/gianc/source/repos/CMakeProj
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/bitset \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/cctype \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/cerrno \
+  C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/chrono \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/climits \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/clocale \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/cmath \
@@ -2620,6 +2631,7 @@ CMakeFiles/game.dir/chunk_cpp/chunk.cpp.o: C:/Users/gianc/source/repos/CMakeProj
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/exception \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/execution \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/format \
+  C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/forward_list \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/functional \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/initializer_list \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/ios \
@@ -2641,6 +2653,7 @@ CMakeFiles/game.dir/chunk_cpp/chunk.cpp.o: C:/Users/gianc/source/repos/CMakeProj
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/queue \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/random \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/ratio \
+  C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/sstream \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/stack \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/stddef.h \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/stdexcept \
@@ -2651,6 +2664,7 @@ CMakeFiles/game.dir/chunk_cpp/chunk.cpp.o: C:/Users/gianc/source/repos/CMakeProj
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/string.h \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/string_view \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/system_error \
+  C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/thread \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/tuple \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/type_traits \
   C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/typeinfo \
@@ -3398,6 +3412,7 @@ CMakeFiles/game.dir/main.cpp.o: C:/Users/gianc/source/repos/CMakeProjectRaylib_T
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/camera_cpp/camera.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/chunk_cpp/chunk.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/main.h \
+  C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/mouse_cpp/mouseDirectionSeeing.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/chunk_cpp/chunk.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/Entity_cpp/Entity.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/camera_cpp/camera.h \
@@ -8216,6 +8231,8 @@ C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__string/c
 
 C:/Users/gianc/emsdk/upstream/lib/clang/23/include/float.h:
 
+C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/forward_list:
+
 C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__iterator/incrementable_traits.h:
 
 C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/cerrno:
@@ -9554,6 +9571,8 @@ C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/came
 
 C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__algorithm/out_value_result.h:
 
+C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__chrono/file_clock.h:
+
 C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__numeric/adjacent_difference.h:
 
 C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__numeric/inclusive_scan.h:
@@ -9614,7 +9633,17 @@ C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__random/u
 
 C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__random/weibull_distribution.h:
 
+C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__thread/this_thread.h:
+
+C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__thread/thread.h:
+
+C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/chrono:
+
 C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/numeric:
+
+C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/sstream:
+
+C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/thread:
 
 C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/rendering/redering.h:
 

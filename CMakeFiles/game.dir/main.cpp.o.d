@@ -678,6 +678,7 @@ CMakeFiles/game.dir/main.cpp.o: \
   C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\Entity_cpp\Entity.h \
   C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\rendering\GUI_cpp\GUI.h \
   C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\blocks.h \
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\mouse_cpp\mouseDirectionSeeing.h \
   C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\raylib\src\rlgl.h \
   C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\emscripten\emscripten.h \
   C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\emscripten\em_asm.h \
