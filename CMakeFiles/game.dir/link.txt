@@ -1,1 +1,1 @@
-C:\Users\gianc\emsdk\upstream\emscripten\em++.bat -sUSE_GLFW=3 -sASYNCIFY -sALLOW_MEMORY_GROWTH --preload-file textures -sEXPORTED_RUNTIME_METHODS=ccall @CMakeFiles\game.dir\objects1.rsp -o game.html @CMakeFiles\game.dir\linkLibs.rsp
+C:\Users\gianc\emsdk\upstream\emscripten\em++.bat -sUSE_GLFW=3 -sASYNCIFY -sALLOW_MEMORY_GROWTH --preload-file textures -sUSE_PTHREADS=1 -pthread -sEXPORTED_RUNTIME_METHODS=ccall @CMakeFiles\game.dir\objects1.rsp -o game.html @CMakeFiles\game.dir\linkLibs.rsp

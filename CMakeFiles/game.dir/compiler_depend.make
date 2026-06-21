@@ -4099,6 +4099,9 @@ CMakeFiles/game.dir/mouse_cpp/mouseDirectionSeeing.cpp.o: C:/Users/gianc/source/
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/chunk_cpp/chunk.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/Entity_cpp/Entity.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/chunk_cpp/chunk.h \
+  C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/Entity_cpp/Entity.h \
+  C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/camera_cpp/camera.h \
+  C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/movement_cpp/movement.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/chunk_cpp/chunk.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/rendering/redering.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/usefullFunc_cpp/usefullFunc.h \
