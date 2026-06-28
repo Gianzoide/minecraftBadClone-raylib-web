@@ -2719,8 +2719,9 @@ CMakeFiles/game.dir/chunk_cpp/chunk.cpp.o: C:/Users/gianc/source/repos/CMakeProj
   C:/Users/gianc/emsdk/upstream/lib/clang/23/include/stdarg.h \
   C:/Users/gianc/emsdk/upstream/lib/clang/23/include/stddef.h \
   C:/Users/gianc/emsdk/upstream/lib/clang/23/include/stdint.h \
+  C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/FastNoiseLite.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/blocks.h \
-  C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/chunk_cpp/chunk.h \
+  C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/blocks.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/chunk_cpp/chunk.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/rendering/redering.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/chunk_cpp/chunk.h \
@@ -3420,6 +3421,7 @@ CMakeFiles/game.dir/main.cpp.o: C:/Users/gianc/source/repos/CMakeProjectRaylib_T
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/raylib/src/raylib.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/raylib/src/raymath.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/raylib/src/rlgl.h \
+  C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/blocks.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/chunk_cpp/chunk.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/rendering/GUI_cpp/GUI.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/rendering/redering.h \
@@ -4102,6 +4104,7 @@ CMakeFiles/game.dir/mouse_cpp/mouseDirectionSeeing.cpp.o: C:/Users/gianc/source/
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/Entity_cpp/Entity.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/camera_cpp/camera.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/movement_cpp/movement.h \
+  C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/blocks.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/chunk_cpp/chunk.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/rendering/redering.h \
   C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/usefullFunc_cpp/usefullFunc.h \
@@ -9647,6 +9650,8 @@ C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/numeric:
 C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/sstream:
 
 C:/Users/gianc/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/thread:
+
+C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/FastNoiseLite.h:
 
 C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/rendering/redering.h:
 

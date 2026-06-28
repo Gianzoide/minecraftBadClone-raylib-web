@@ -650,4 +650,8 @@ CMakeFiles/game.dir/blocks.cpp.o: \
   C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__locale_dir\time.h \
   C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__locale_dir\wbuffer_convert.h \
   C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__locale_dir\wstring_convert.h \
-  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\cstdarg
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\cstdarg \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\queue \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__fwd\deque.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__fwd\queue.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\deque
