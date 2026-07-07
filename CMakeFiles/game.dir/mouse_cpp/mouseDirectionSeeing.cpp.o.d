@@ -681,4 +681,8 @@ CMakeFiles/game.dir/mouse_cpp/mouseDirectionSeeing.cpp.o: \
   C:\Users\gianc\emsdk\upstream\lib\clang\23\include\__float_infinity_nan.h \
   C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\mouse_cpp\..\movement_cpp\movement.h \
   C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\mouse_cpp\..\movement_cpp\..\camera_cpp\camera.h \
-  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\mouse_cpp\..\movement_cpp\..\Entity_cpp\Entity.h
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\mouse_cpp\..\movement_cpp\..\Entity_cpp\Entity.h \
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\mouse_cpp\..\particles_cpp\particles.h \
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\mouse_cpp\..\particles_cpp\..\chunk_cpp\chunk.h \
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\mouse_cpp\..\particles_cpp\..\camera_cpp\camera.h \
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\mouse_cpp\..\particles_cpp\..\blocks.h

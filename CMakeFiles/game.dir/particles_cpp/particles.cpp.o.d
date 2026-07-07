@@ -1,6 +1,5 @@
-CMakeFiles/game.dir/main.cpp.o: \
-  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\main.cpp \
-  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\main.h \
+CMakeFiles/game.dir/particles_cpp/particles.cpp.o: \
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\particles_cpp\particles.cpp \
   C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\iostream \
   C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__config \
   C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__config_site \
@@ -663,40 +662,69 @@ CMakeFiles/game.dir/main.cpp.o: \
   C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__fwd\stack.h \
   C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\print \
   C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\unistd.h \
-  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\camera_cpp\camera.h \
-  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\raylib\src\raylib.h \
-  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\chunk_cpp\chunk.h \
-  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\raylib\src\raymath.h \
-  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\list \
-  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\usefullFunc_cpp\usefullFunc.h \
-  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\rendering\redering.h \
-  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\rendering\..\chunk_cpp\chunk.h \
-  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\rendering\..\blocks.h \
-  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\movement_cpp\movement.h \
-  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\movement_cpp\..\camera_cpp\camera.h \
-  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\movement_cpp\..\Entity_cpp\Entity.h \
-  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\movement_cpp\..\Entity_cpp\..\chunk_cpp\chunk.h \
-  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\Entity_cpp\Entity.h \
-  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\rendering\GUI_cpp\GUI.h \
-  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\blocks.h \
-  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\mouse_cpp\mouseDirectionSeeing.h \
   C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\particles_cpp\particles.h \
   C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\particles_cpp\..\chunk_cpp\chunk.h \
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\raylib\src\raylib.h \
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\raylib\src\raymath.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\list \
   C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\particles_cpp\..\camera_cpp\camera.h \
   C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\particles_cpp\..\blocks.h \
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\particles_cpp\..\movement_cpp\movement.h \
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\particles_cpp\..\movement_cpp\..\camera_cpp\camera.h \
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\particles_cpp\..\movement_cpp\..\Entity_cpp\Entity.h \
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\particles_cpp\..\movement_cpp\..\Entity_cpp\..\chunk_cpp\chunk.h \
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\particles_cpp\..\movement_cpp\collisionCheck.h \
+  C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\particles_cpp\..\movement_cpp\..\chunk_cpp\chunk.h \
   C:\Users\gianc\source\repos\CMakeProjectRaylib_TEST\CMakeProjectRaylib_TEST\raylib\src\rlgl.h \
-  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\emscripten\emscripten.h \
-  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\emscripten\em_asm.h \
-  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\emscripten\em_js.h \
-  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\emscripten\em_macros.h \
-  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\stdbool.h \
-  C:\Users\gianc\emsdk\upstream\lib\clang\23\include\stdbool.h \
-  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\stdbool.h \
-  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\emscripten\em_types.h \
-  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\emscripten\promise.h \
-  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\emscripten\version.h \
-  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\emscripten\wget.h \
-  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\emscripten\html5.h \
-  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\emscripten\console.h \
-  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\emscripten\eventloop.h \
-  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\emscripten\html5_webgl.h
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\random \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\bernoulli_distribution.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\uniform_real_distribution.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\generate_canonical.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\binomial_distribution.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\cauchy_distribution.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\chi_squared_distribution.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\gamma_distribution.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\exponential_distribution.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\default_random_engine.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\linear_congruential_engine.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\is_seed_sequence.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\discard_block_engine.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\discrete_distribution.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\numeric \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__numeric\accumulate.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__numeric\adjacent_difference.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__numeric\inner_product.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__numeric\iota.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__numeric\exclusive_scan.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__numeric\gcd_lcm.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__numeric\inclusive_scan.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__numeric\pstl.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__numeric\ranges_iota.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__algorithm\out_value_result.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__numeric\reduce.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__numeric\transform_exclusive_scan.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__numeric\transform_inclusive_scan.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__numeric\transform_reduce.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\execution \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__type_traits\is_execution_policy.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\extreme_value_distribution.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\fisher_f_distribution.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\geometric_distribution.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\negative_binomial_distribution.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\poisson_distribution.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\clamp_to_integral.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\normal_distribution.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\independent_bits_engine.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\knuth_b.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\shuffle_order_engine.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\lognormal_distribution.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\mersenne_twister_engine.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\piecewise_constant_distribution.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\piecewise_linear_distribution.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\random_device.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\ranlux.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\subtract_with_carry_engine.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\seed_seq.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\student_t_distribution.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\uniform_random_bit_generator.h \
+  C:\Users\gianc\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__random\weibull_distribution.h

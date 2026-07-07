@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/game.dir/movement_cpp/collisionCheck.cpp.o.d"
   "CMakeFiles/game.dir/movement_cpp/movement.cpp.o"
   "CMakeFiles/game.dir/movement_cpp/movement.cpp.o.d"
+  "CMakeFiles/game.dir/particles_cpp/particles.cpp.o"
+  "CMakeFiles/game.dir/particles_cpp/particles.cpp.o.d"
   "CMakeFiles/game.dir/rendering/GUI_cpp/GUI.cpp.o"
   "CMakeFiles/game.dir/rendering/GUI_cpp/GUI.cpp.o.d"
   "CMakeFiles/game.dir/rendering/GUI_cpp/hotBar.cpp.o"

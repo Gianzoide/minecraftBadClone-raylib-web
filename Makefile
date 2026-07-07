@@ -398,6 +398,30 @@ movement_cpp/movement.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/movement_cpp/movement.cpp.s
 .PHONY : movement_cpp/movement.cpp.s
 
+particles_cpp/particles.o: particles_cpp/particles.cpp.o
+.PHONY : particles_cpp/particles.o
+
+# target to build an object file
+particles_cpp/particles.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/particles_cpp/particles.cpp.o
+.PHONY : particles_cpp/particles.cpp.o
+
+particles_cpp/particles.i: particles_cpp/particles.cpp.i
+.PHONY : particles_cpp/particles.i
+
+# target to preprocess a source file
+particles_cpp/particles.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/particles_cpp/particles.cpp.i
+.PHONY : particles_cpp/particles.cpp.i
+
+particles_cpp/particles.s: particles_cpp/particles.cpp.s
+.PHONY : particles_cpp/particles.s
+
+# target to generate assembly for a file
+particles_cpp/particles.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/particles_cpp/particles.cpp.s
+.PHONY : particles_cpp/particles.cpp.s
+
 rendering/GUI_cpp/GUI.o: rendering/GUI_cpp/GUI.cpp.o
 .PHONY : rendering/GUI_cpp/GUI.o
 
@@ -534,6 +558,9 @@ help:
 	@echo ... movement_cpp/movement.o
 	@echo ... movement_cpp/movement.i
 	@echo ... movement_cpp/movement.s
+	@echo ... particles_cpp/particles.o
+	@echo ... particles_cpp/particles.i
+	@echo ... particles_cpp/particles.s
 	@echo ... rendering/GUI_cpp/GUI.o
 	@echo ... rendering/GUI_cpp/GUI.i
 	@echo ... rendering/GUI_cpp/GUI.s
