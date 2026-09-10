@@ -1,0 +1,20 @@
+{
+  "OutputFoldersPerTargetSystem": {
+    "Local Machine": [
+      "out\\build\\x64-Debug",
+      "out\\install\\x64-Debug"
+    ]
+  },
+  "ExpandedNodes": [
+    "",
+    "\\chunk_cpp",
+    "\\movement_cpp",
+    "\\particles_cpp",
+    "\\rendering",
+    "\\rendering\\GUI_cpp",
+    "\\shaders",
+    "\\textures",
+    "\\textures\\GUI"
+  ],
+  "PreviewInSolutionExplorer": false
+}
