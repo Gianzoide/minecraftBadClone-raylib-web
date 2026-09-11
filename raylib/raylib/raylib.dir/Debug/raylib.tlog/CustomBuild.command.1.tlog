@@ -1,0 +1,10 @@
+^C:\USERS\GIANC\SOURCE\REPOS\CMAKEPROJECTRAYLIB_TEST\CMAKEPROJECTRAYLIB_TEST\RAYLIB\SRC\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST -BC:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST --check-stamp-file C:/Users/gianc/source/repos/CMakeProjectRaylib_TEST/CMakeProjectRaylib_TEST/raylib/raylib/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
