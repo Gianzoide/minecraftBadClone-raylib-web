@@ -1,0 +1,11 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/gianc/source/repos/minecraftBadClone-raylib-web/out/build/x64-Debug/cmake_install.cmake",
+		"C:/Users/gianc/source/repos/minecraftBadClone-raylib-web/out/build/x64-Debug/raylib/cmake_install.cmake",
+		"C:/Users/gianc/source/repos/minecraftBadClone-raylib-web/out/build/x64-Debug/raylib/raylib/cmake_install.cmake",
+		"C:/Users/gianc/source/repos/minecraftBadClone-raylib-web/out/build/x64-Debug/raylib/raylib/external/glfw/cmake_install.cmake",
+		"C:/Users/gianc/source/repos/minecraftBadClone-raylib-web/out/build/x64-Debug/raylib/raylib/external/glfw/src/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

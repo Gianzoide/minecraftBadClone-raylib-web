@@ -230,7 +230,7 @@ struct Chunk {
 	int quatityBlocks = 0;
 	bool wasTerrainGenerated = false;
 	vector<blockOfstructureInfo> structureToBePlaced = {};
-	std::unordered_set<blockBreakingAnimation> blockBreaking;
+	//std::unordered_set<blockBreakingAnimation> blockBreaking;
 	//vector<entitiesInfo> entities = {};
 };  
 
