@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/gianc/source/repos/minecraftBadClone-raylib-web/build_web/cmake_install.cmake",
+		"C:/Users/gianc/source/repos/minecraftBadClone-raylib-web/build_web/raylib/cmake_install.cmake",
+		"C:/Users/gianc/source/repos/minecraftBadClone-raylib-web/build_web/raylib/raylib/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

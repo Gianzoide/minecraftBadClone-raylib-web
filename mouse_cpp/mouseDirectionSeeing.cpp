@@ -340,7 +340,7 @@ void hoveringBlock(Entity& entity)
 
             uint8_t i = 0;
             for (auto& faces : ChooseshapeToRender[(int)shapeToAnimation]) {
-                AtlasTile& textureDirection = AtlasTile{0,0,1,1};
+                AtlasTile textureDirection = AtlasTile{0,0,1,1};
                 for (SquareFace& face : faces) {
 
                     auto fac = face.face;
