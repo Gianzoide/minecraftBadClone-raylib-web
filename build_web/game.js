@@ -71,7 +71,7 @@ var ENVIRONMENT_IS_SHELL = !ENVIRONMENT_IS_WEB && !ENVIRONMENT_IS_NODE && !ENVIR
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: C:\Users\gianc\AppData\Local\Temp\tmpcjanmka5.js
+// include: C:\Users\gianc\AppData\Local\Temp\tmp0b8v_vxr.js
 
   if (!Module['expectedDataFileDownloads']) Module['expectedDataFileDownloads'] = 0;
   Module['expectedDataFileDownloads']++;
@@ -159,6 +159,7 @@ var ENVIRONMENT_IS_SHELL = !ENVIRONMENT_IS_WEB && !ENVIRONMENT_IS_NODE && !ENVIR
       function assert(check, msg) {
         if (!check) throw new Error(msg);
       }
+Module['FS_createPath']("/", "shaders", true, true);
 Module['FS_createPath']("/", "textures", true, true);
 Module['FS_createPath']("/textures", "GUI", true, true);
 
@@ -201,25 +202,25 @@ Module['FS_createPath']("/textures", "GUI", true, true);
     }
 
     }
-    loadPackage({"files": [{"filename": "/textures/GUI/hotbar.png", "start": 0, "end": 1872}, {"filename": "/textures/GUI/hotbar_selection.png", "start": 1872, "end": 2318}, {"filename": "/textures/GUI/inventory.png", "start": 2318, "end": 3306}, {"filename": "/textures/atlas_0.png", "start": 3306, "end": 51617}, {"filename": "/textures/destroy_stage.png", "start": 51617, "end": 51797}], "remote_package_size": 51797});
+    loadPackage({"files": [{"filename": "/shaders/cutout.fs", "start": 0, "end": 357}, {"filename": "/shaders/cutout_web.fs", "start": 357, "end": 678}, {"filename": "/textures/GUI/hotbar.png", "start": 678, "end": 2550}, {"filename": "/textures/GUI/hotbar_selection.png", "start": 2550, "end": 2996}, {"filename": "/textures/GUI/inventory.png", "start": 2996, "end": 3984}, {"filename": "/textures/atlas_0.png", "start": 3984, "end": 52295}, {"filename": "/textures/destroy_stage.png", "start": 52295, "end": 52475}], "remote_package_size": 52475});
 
   })();
 
-// end include: C:\Users\gianc\AppData\Local\Temp\tmpcjanmka5.js
-// include: C:\Users\gianc\AppData\Local\Temp\tmpjai5dwhb.js
+// end include: C:\Users\gianc\AppData\Local\Temp\tmp0b8v_vxr.js
+// include: C:\Users\gianc\AppData\Local\Temp\tmp7bw5e236.js
 
     // All the pre-js content up to here must remain later on, we need to run
     // it.
     if ((typeof ENVIRONMENT_IS_WASM_WORKER != 'undefined' && ENVIRONMENT_IS_WASM_WORKER) || (typeof ENVIRONMENT_IS_PTHREAD != 'undefined' && ENVIRONMENT_IS_PTHREAD) || (typeof ENVIRONMENT_IS_AUDIO_WORKLET != 'undefined' && ENVIRONMENT_IS_AUDIO_WORKLET)) Module['preRun'] = [];
     var necessaryPreJSTasks = Module['preRun'].slice();
-  // end include: C:\Users\gianc\AppData\Local\Temp\tmpjai5dwhb.js
-// include: C:\Users\gianc\AppData\Local\Temp\tmpat_gr9tl.js
+  // end include: C:\Users\gianc\AppData\Local\Temp\tmp7bw5e236.js
+// include: C:\Users\gianc\AppData\Local\Temp\tmp1lg709er.js
 
     if (!Module['preRun']) throw 'Module.preRun should exist because file support used it; did a pre-js delete it?';
     necessaryPreJSTasks.forEach((task) => {
       if (Module['preRun'].indexOf(task) < 0) throw 'All preRun tasks that exist before user pre-js code should remain after; did you replace Module or modify Module.preRun?';
     });
-  // end include: C:\Users\gianc\AppData\Local\Temp\tmpat_gr9tl.js
+  // end include: C:\Users\gianc\AppData\Local\Temp\tmp1lg709er.js
 
 
 var arguments_ = [];
@@ -10167,49 +10168,49 @@ function checkIncomingModuleAPI() {
   ignoredModuleProp('onSbrkGrow');
 }
 var ASM_CONSTS = {
-  123614: () => { if (document.fullscreenElement) return 1; },  
- 123660: () => { return Module.canvas.width; },  
- 123692: () => { return parseInt(Module.canvas.style.width); },  
- 123740: () => { document.exitFullscreen(); },  
- 123767: () => { setTimeout(function(){ Module.requestFullscreen(false, false); }, 100); },  
- 123839: () => { if (document.fullscreenElement) return 1; },  
- 123885: () => { return Module.canvas.width; },  
- 123917: () => { return screen.width; },  
- 123942: () => { document.exitFullscreen(); },  
- 123969: ($0) => { const canvasId = UTF8ToString($0); setTimeout(function() { Module.requestFullscreen(false, true); setTimeout(function() { document.querySelector(canvasId).style.width="unset"; }, 100); }, 100); },  
- 124163: () => { return window.innerWidth; },  
- 124189: () => { return window.innerHeight; },  
- 124216: () => { if (document.fullscreenElement) return 1; },  
- 124262: () => { return Module.canvas.width; },  
- 124294: () => { return parseInt(Module.canvas.style.width); },  
- 124342: () => { if (document.fullscreenElement) return 1; },  
- 124388: () => { return Module.canvas.width; },  
- 124420: () => { return screen.width; },  
- 124445: () => { return window.innerWidth; },  
- 124471: () => { return window.innerHeight; },  
- 124498: () => { if (document.fullscreenElement) return 1; },  
- 124544: () => { return Module.canvas.width; },  
- 124576: () => { return screen.width; },  
- 124601: () => { document.exitFullscreen(); },  
- 124628: () => { if (document.fullscreenElement) return 1; },  
- 124674: () => { return Module.canvas.width; },  
- 124706: () => { return parseInt(Module.canvas.style.width); },  
- 124754: () => { document.exitFullscreen(); },  
- 124781: ($0) => { Module.canvas.style.opacity = $0; },  
- 124819: () => { return screen.width; },  
- 124844: () => { return screen.height; },  
- 124870: () => { return window.screenX; },  
- 124897: () => { return window.screenY; },  
- 124924: () => { return window.devicePixelRatio; },  
- 124960: ($0) => { navigator.clipboard.writeText(UTF8ToString($0)); },  
- 125013: ($0) => { Module.canvas.style.cursor = UTF8ToString($0); },  
- 125064: () => { Module.canvas.style.cursor = 'none'; },  
- 125101: ($0, $1, $2, $3) => { try { navigator.getGamepads()[$0].vibrationActuator.playEffect('dual-rumble', { startDelay: 0, duration: $3, weakMagnitude: $1, strongMagnitude: $2 }); } catch (e) { try { navigator.getGamepads()[$0].hapticActuators[0].pulse($2, $3); } catch (e) { } } },  
- 125357: ($0) => { Module.canvas.style.cursor = UTF8ToString($0); },  
- 125408: () => { if (document.pointerLockElement) return 1; },  
- 125455: () => { if (document.fullscreenElement) return 1; },  
- 125501: () => { return window.innerWidth; },  
- 125527: () => { return window.innerHeight; }
+  123630: () => { if (document.fullscreenElement) return 1; },  
+ 123676: () => { return Module.canvas.width; },  
+ 123708: () => { return parseInt(Module.canvas.style.width); },  
+ 123756: () => { document.exitFullscreen(); },  
+ 123783: () => { setTimeout(function(){ Module.requestFullscreen(false, false); }, 100); },  
+ 123855: () => { if (document.fullscreenElement) return 1; },  
+ 123901: () => { return Module.canvas.width; },  
+ 123933: () => { return screen.width; },  
+ 123958: () => { document.exitFullscreen(); },  
+ 123985: ($0) => { const canvasId = UTF8ToString($0); setTimeout(function() { Module.requestFullscreen(false, true); setTimeout(function() { document.querySelector(canvasId).style.width="unset"; }, 100); }, 100); },  
+ 124179: () => { return window.innerWidth; },  
+ 124205: () => { return window.innerHeight; },  
+ 124232: () => { if (document.fullscreenElement) return 1; },  
+ 124278: () => { return Module.canvas.width; },  
+ 124310: () => { return parseInt(Module.canvas.style.width); },  
+ 124358: () => { if (document.fullscreenElement) return 1; },  
+ 124404: () => { return Module.canvas.width; },  
+ 124436: () => { return screen.width; },  
+ 124461: () => { return window.innerWidth; },  
+ 124487: () => { return window.innerHeight; },  
+ 124514: () => { if (document.fullscreenElement) return 1; },  
+ 124560: () => { return Module.canvas.width; },  
+ 124592: () => { return screen.width; },  
+ 124617: () => { document.exitFullscreen(); },  
+ 124644: () => { if (document.fullscreenElement) return 1; },  
+ 124690: () => { return Module.canvas.width; },  
+ 124722: () => { return parseInt(Module.canvas.style.width); },  
+ 124770: () => { document.exitFullscreen(); },  
+ 124797: ($0) => { Module.canvas.style.opacity = $0; },  
+ 124835: () => { return screen.width; },  
+ 124860: () => { return screen.height; },  
+ 124886: () => { return window.screenX; },  
+ 124913: () => { return window.screenY; },  
+ 124940: () => { return window.devicePixelRatio; },  
+ 124976: ($0) => { navigator.clipboard.writeText(UTF8ToString($0)); },  
+ 125029: ($0) => { Module.canvas.style.cursor = UTF8ToString($0); },  
+ 125080: () => { Module.canvas.style.cursor = 'none'; },  
+ 125117: ($0, $1, $2, $3) => { try { navigator.getGamepads()[$0].vibrationActuator.playEffect('dual-rumble', { startDelay: 0, duration: $3, weakMagnitude: $1, strongMagnitude: $2 }); } catch (e) { try { navigator.getGamepads()[$0].hapticActuators[0].pulse($2, $3); } catch (e) { } } },  
+ 125373: ($0) => { Module.canvas.style.cursor = UTF8ToString($0); },  
+ 125424: () => { if (document.pointerLockElement) return 1; },  
+ 125471: () => { if (document.fullscreenElement) return 1; },  
+ 125517: () => { return window.innerWidth; },  
+ 125543: () => { return window.innerHeight; }
 };
 function SetCanvasIdJs(out,outSize) { var canvasId = "#" + Module.canvas.id; stringToUTF8(canvasId, out, outSize); }
 function __asyncjs__RequestClipboardData() { return Asyncify.handleAsync(async () => { if (navigator.clipboard && window.isSecureContext) { let items = await navigator.clipboard.read(); for (const item of items) { if (item.types.includes("text/plain")) { const blob = await item.getType("text/plain"); const text = await blob.text(); window._lastClipboardString = text; } else if (item.types.find(t => t.startsWith("image/"))) { const blob = await item.getType(item.types.find(t => t.startsWith("image/"))); const bitmap = await createImageBitmap(blob); const canvas = document.createElement('canvas'); canvas.width = bitmap.width; canvas.height = bitmap.height; const ctx = canvas.getContext('2d'); ctx.drawImage(bitmap, 0, 0); const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height).data; window._lastImgWidth = canvas.width; window._lastImgHeight = canvas.height; window._lastImgData = imgData; } } } else console.warn("Clipboard read() requires HTTPS/Localhost"); }); }

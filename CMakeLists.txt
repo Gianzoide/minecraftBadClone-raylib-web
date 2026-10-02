@@ -28,7 +28,10 @@ target_include_directories(game PRIVATE
     ${CMAKE_SOURCE_DIR}/usefullFunc_cpp
 )
 
-file(COPY ${CMAKE_SOURCE_DIR}/textures DESTINATION ${CMAKE_BINARY_DIR})
+target_link_options(game PRIVATE
+    "SHELL:--preload-file ${CMAKE_SOURCE_DIR}/shaders@/shaders"
+    "SHELL:--preload-file ${CMAKE_SOURCE_DIR}/textures@/textures"
+)
 
 target_link_libraries(game PRIVATE raylib)
 

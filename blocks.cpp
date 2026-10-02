@@ -233,19 +233,11 @@ void getBlocksTextures()
     SetTextureFilter(atlas, TEXTURE_FILTER_ANISOTROPIC_16X);
 #endif
 
-    cutoutShader = LoadShader(
-        0,
-        "./shaders/cutout.fs"
-    );
-
-    //blocksTextures
-    //textures.push_back(LoadTexture("textures/atlas_0.png"));
-    //textures.push_back(LoadTexture("textures/dirt.png"));
-    //textures.push_back(LoadTexture("textures/stone.png"));
-    //textures.push_back(LoadTexture("textures/cobblestone.png"));
-    //textures.push_back(LoadTexture("textures/grass_block_side.png"));
-    //textures.push_back(LoadTexture("textures/grass_block_top.png"));
-    //textures.push_back(LoadTexture("./textures/glass.png")); //index 5
+#ifdef PLATFORM_WEB
+    cutoutShader = LoadShader( 0, "./shaders/cutout_web.fs");
+#else
+    cutoutShader = LoadShader( 0, "./shaders/cutout.fs");
+#endif
 }
 
 static uint32_t hash3D(int x, int y, int z)

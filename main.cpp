@@ -119,7 +119,12 @@ int main() {
     //SetTraceLogLevel(LOG_DEBUG);
     InitWindow(WindowSizeX, WindowSizeY, "Cave Game");
     SetTargetFPS(60);
+
+#ifndef PLATFORM_WEB
     changeRenderDistanceRadius(3);  
+#else
+    changeRenderDistanceRadius(1);
+#endif
 
 
     //rlEnableBackfaceCulling();
