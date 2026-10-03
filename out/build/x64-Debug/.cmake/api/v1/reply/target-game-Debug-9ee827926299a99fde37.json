@@ -15,7 +15,6 @@
 		[
 			"_add_executable",
 			"add_executable",
-			"target_link_options",
 			"target_link_libraries",
 			"add_custom_command",
 			"target_include_directories"
@@ -46,32 +45,26 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 31,
-				"parent" : 0
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 36,
+				"line" : 41,
 				"parent" : 0
 			},
 			{
 				"file" : 2
 			},
 			{
-				"command" : 3,
+				"command" : 2,
 				"file" : 2,
 				"line" : 99,
-				"parent" : 5
+				"parent" : 4
 			},
 			{
-				"command" : 4,
+				"command" : 3,
 				"file" : 0,
 				"line" : 626,
 				"parent" : 1
 			},
 			{
-				"command" : 5,
+				"command" : 4,
 				"file" : 1,
 				"line" : 27,
 				"parent" : 0
@@ -86,7 +79,7 @@
 	"compileDependencies" : 
 	[
 		{
-			"backtrace" : 4,
+			"backtrace" : 3,
 			"id" : "raylib::@7d429ebd5d102775094d"
 		}
 	],
@@ -102,22 +95,22 @@
 			"defines" : 
 			[
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"define" : "GRAPHICS_API_OPENGL_33"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"define" : "PLATFORM_DESKTOP"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 8,
+					"backtrace" : 7,
 					"path" : "C:/Users/gianc/source/repos/minecraftBadClone-raylib-web/usefullFunc_cpp"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"path" : "C:/Users/gianc/source/repos/minecraftBadClone-raylib-web/raylib/src"
 				}
 			],
@@ -151,11 +144,11 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 4,
+			"backtrace" : 3,
 			"id" : "raylib::@7d429ebd5d102775094d"
 		},
 		{
-			"backtrace" : 4,
+			"backtrace" : 3,
 			"id" : "glfw::@a896dd99b4a5c6eab3d9"
 		}
 	],
@@ -178,41 +171,21 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "--preload-file",
-				"role" : "flags"
-			},
-			{
-				"backtrace" : 3,
-				"fragment" : "C:/Users/gianc/source/repos/minecraftBadClone-raylib-web/shaders@/shaders",
-				"role" : "flags"
-			},
-			{
-				"backtrace" : 3,
-				"fragment" : "--preload-file",
-				"role" : "flags"
-			},
-			{
-				"backtrace" : 3,
-				"fragment" : "C:/Users/gianc/source/repos/minecraftBadClone-raylib-web/textures@/textures",
-				"role" : "flags"
-			},
-			{
-				"backtrace" : 4,
 				"fragment" : "raylib\\raylib\\raylib.lib",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 6,
+				"backtrace" : 5,
 				"fragment" : "opengl32.lib",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 6,
+				"backtrace" : 5,
 				"fragment" : "glu32.lib",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 6,
+				"backtrace" : 5,
 				"fragment" : "winmm.lib",
 				"role" : "libraries"
 			},
@@ -226,7 +199,7 @@
 	"linkLibraries" : 
 	[
 		{
-			"backtrace" : 4,
+			"backtrace" : 3,
 			"id" : "raylib::@7d429ebd5d102775094d"
 		}
 	],
@@ -235,7 +208,7 @@
 	"orderDependencies" : 
 	[
 		{
-			"backtrace" : 7,
+			"backtrace" : 6,
 			"id" : "game::@6890427a1f51a3e7e1df"
 		}
 	],
