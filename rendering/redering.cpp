@@ -800,6 +800,62 @@ void initRendering()
     }
 }
 
+void renderBreakingBlocks(Chunk& chunk, int3D& blockCoordInIndex, int breakingInt) {
+
+    int coordInIndex = Index(blockCoordInIndex.x, blockCoordInIndex.y, blockCoordInIndex.z);
+    auto& block = chunk.blocks[coordInIndex];
+
+    BlockID blockIdBreaking = block.id;
+    //cout << endl <<"blockIdBreaking :"<< blockIdBreaking;
+    Rotation rotationBlock = block.rotation;
+    Shape shapeToAnimation = blockIdDefinition[blockIdBreaking].shapeTexture;
+    blockyTexture textureToAnimation = blockIdDefinition[blockIdBreaking].texture;
+
+    float porcentage = (float)breakingInt / (float)blockIdDefinition[blockIdBreaking].endurance;
+    //cout << endl << "porcentage :" << porcentage;
+
+    Vector3 chunkCoordToTheRender = {
+        (float)chunk.x * chunkXlength,
+        (float)chunk.y * chunkYlength,
+        (float)chunk.z * chunkZlength
+    };
+
+    Vector3 baseCoord = { (float)blockCoordInIndex.x, (float)blockCoordInIndex.y, (float)blockCoordInIndex.z };
+    uint8_t i = 0;
+    AtlasTile textureDirection = AtlasTile{ 0,0,1,1 };
+    int whatIMGIndex_ofBreakingAnimation = 9 - std::min(static_cast<int>(porcentage * 10), 9);
+
+    for (auto& faces : ChooseshapeToRender[(int)shapeToAnimation]) {
+        for (SquareFace& face : faces) {
+
+            auto fac = face.face;
+            for (int v = 0; v < 4; v++) {
+
+                fac[v] = rotateXYZ_centered(
+                    fac[v],
+                    rotX(rotationBlock),
+                    rotY(rotationBlock),
+                    rotZ(rotationBlock)
+                );
+            }
+            // 2. Calculate the normal AFTER rotation
+            Vector3 edge1 = Vector3Subtract(fac[1], fac[0]);
+            Vector3 edge2 = Vector3Subtract(fac[2], fac[0]);
+
+            Vector3 faceNormal = Vector3Normalize(Vector3CrossProduct(edge1, edge2));
+            Vector3 offset = Vector3Scale(faceNormal, 0.01f);
+
+            for (int v = 0; v < 4; v++) {
+                fac[v] = Vector3Add(fac[v], offset);
+                fac[v] = Vector3Add(fac[v], baseCoord);
+                fac[v] = Vector3Add(fac[v], chunkCoordToTheRender);
+            }
+            DrawItemFace(fac[0], fac[1], fac[2], fac[3], textureDirection, breakingAnimation[whatIMGIndex_ofBreakingAnimation]);
+        }
+        i++;
+    }
+}
+
 void renderBlocks() {
     rlEnableBackfaceCulling();
     //rlDisableBackfaceCulling();
@@ -837,6 +893,7 @@ void renderBlocks() {
             int z = 0;
             for (allMeshes& zChunk : yChunk)
             {
+
                 if (zChunk.chunkMesh.vertexCount == 0)
                 {
                     z++;
@@ -876,7 +933,31 @@ void renderBlocks() {
                 chunksToRender.push_back({
                     &zChunk,
                     dx * dx + dy * dy + dz * dz
-                    });
+                });
+
+                //render breaking blocks animation
+                int3D chunkCoord = {
+                    CenterCoords.x + x - renderDistanceDiameterHalfed,
+                    CenterCoords.y + y - renderDistanceDiameterHalfed,
+                    CenterCoords.z + z - renderDistanceDiameterHalfed,
+                };
+                Chunk* chunk = nullptr;
+                try {
+                    chunk = getChunk(chunkCoord.x, chunkCoord.y, chunkCoord.z);
+                }
+                catch (const std::exception& e) {
+                    std::cerr << "Error: " << e.what() << std::endl;
+                }
+                if (chunk) {
+                    for (auto& actions : chunk->actionsToBeMade){
+                        if (actions.typeOfAction != actionType::breakingBlock) {
+                            continue;
+                        }
+                        int3D coordAction = { actions.x , actions.y , actions.z };
+                        auto breakingInt = std::any_cast<std::shared_ptr<int>>(actions.actionData);
+                        renderBreakingBlocks(*chunk, coordAction, *breakingInt);
+                    }
+                }
 
                 z++;
             }
@@ -886,16 +967,19 @@ void renderBlocks() {
     }
 
     // Farthest first
-    std::sort(chunksToRender.begin(), chunksToRender.end(),
-        [](const ChunkRenderInfo& a, const ChunkRenderInfo& b)
-        {
-            return a.distanceSq > b.distanceSq;
-        });
+    //std::sort(chunksToRender.begin(), chunksToRender.end(),
+    //    [](const ChunkRenderInfo& a, const ChunkRenderInfo& b)
+    //    {
+    //        return a.distanceSq > b.distanceSq;
+    //    });
 
     // Draw
     for (const auto& chunk : chunksToRender)
     {
-        DrawMesh(chunk.mesh->chunkMesh, blockMaterial, MatrixIdentity());
+        if (chunk.mesh != nullptr) {
+
+            DrawMesh(chunk.mesh->chunkMesh, blockMaterial, MatrixIdentity());
+        }
     }
 
 }

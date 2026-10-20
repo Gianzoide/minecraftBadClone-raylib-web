@@ -169,7 +169,7 @@ enum BlockID : uint8_t
 	gravel = 16,
 	iron_ore = 17,
 	coal_ore = 18,
-	COUNT
+	COUNT,
 };
 
 struct blockInfo {
@@ -213,6 +213,7 @@ struct BlockDefinition
 struct blockOfstructureInfo {
 	BlockID blockId;
 	int3D coords;
+	int data = 0;
 };
 struct blockBreakingAnimation {
 	int coord;
@@ -223,14 +224,86 @@ extern array<BlockDefinition, (size_t)BlockID::COUNT> blockIdDefinition;
 
 using ChunkBlocks = array<blockInfo, chunkXlength* chunkYlength* chunkZlength>;
 
+#include <unordered_set>
+struct int3DStructure
+{
+	int x, y, z;
+	bool operator==(const int3DStructure& other) const
+	{
+		return x == other.x &&
+			y == other.y &&
+			z == other.z;
+	}
+};
+struct int3DStructureHash
+{
+	size_t operator()(const int3DStructure& pos) const
+	{
+		return std::hash<int>()(pos.x) ^
+			(std::hash<int>()(pos.y) << 1) ^
+			(std::hash<int>()(pos.z) << 2);
+	}
+};
+extern unordered_set<int3DStructure, int3DStructureHash> structures;
+
+struct int3DStructure_Block
+{
+	int x, y, z;
+	bool operator==(const int3DStructure_Block& other) const
+	{
+		return x == other.x &&
+			y == other.y &&
+			z == other.z;
+	}
+	int data = 0;
+	BlockID blockId;
+};
+struct int3DStructureHash_Block
+{
+	size_t operator()(const int3DStructure_Block& pos) const
+	{
+		return std::hash<int>()(pos.x) ^
+			(std::hash<int>()(pos.y) << 1) ^
+			(std::hash<int>()(pos.z) << 2);
+	}
+};
+#include <any>
+enum actionType
+{
+	breakingBlock
+};
+struct int3DAction
+{
+	int x, y, z;
+	bool operator==(const int3DAction& other) const
+	{
+		return x == other.x &&
+			y == other.y &&
+			z == other.z;
+	}
+	actionType typeOfAction;
+	any actionData;
+};
+struct int3DActionHash
+{
+	size_t operator()(const int3DAction& pos) const
+	{
+		return std::hash<int>()(pos.x) ^
+			(std::hash<int>()(pos.y) << 1) ^
+			(std::hash<int>()(pos.z) << 2);
+	}
+};
+
 struct Chunk {
 	int x = 0, y = 0, z = 0;
 	ChunkBlocks blocks = {};
 	
 	int quatityBlocks = 0;
 	bool wasTerrainGenerated = false;
-	vector<blockOfstructureInfo> structureToBePlaced = {};
-	//std::unordered_set<blockBreakingAnimation> blockBreaking;
+	unordered_set<int3DStructure_Block, int3DStructureHash_Block> structureToBePlaced = {};
+
+	unordered_set<int3DAction, int3DActionHash> actionsToBeMade = {};
+
 	//vector<entitiesInfo> entities = {};
 };  
 
@@ -258,4 +331,6 @@ vector<collisionBox> rotateCollisionBoxes(
 	const vector<collisionBox>& boxes,
 	Rotation rot
 );
+
+
 

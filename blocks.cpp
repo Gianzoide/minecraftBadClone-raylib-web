@@ -86,7 +86,7 @@ array<BlockDefinition, (size_t)BlockID::COUNT> blockIdDefinition;
 
 //vector<Texture2D> textures;
 Texture2D atlas;
-Texture2D breakingAnimation;
+std::array<Texture2D, 10> breakingAnimation;
 Shader cutoutShader;
 
 void apply100TransparentShaders(Image& image, Texture2D& source2DTexture) {
@@ -126,6 +126,8 @@ void getBlocksTextures()
     blockTexture[(size_t)blockTextureEnum::iron_ore] = {TA.iron_orePNG, TA.iron_orePNG, TA.iron_orePNG, TA.iron_orePNG, TA.iron_orePNG, TA.iron_orePNG };
     blockTexture[(size_t)blockTextureEnum::coal_ore] = {TA.coal_orePNG, TA.coal_orePNG, TA.coal_orePNG, TA.coal_orePNG, TA.coal_orePNG, TA.coal_orePNG };
 
+    int FlowersEndurance = 80;
+
     blockIdDefinition[(size_t)BlockID::Air] = {};
     blockIdDefinition[(size_t)BlockID::Stone_block] = {
         blockTexture[(size_t)blockTextureEnum::stone], collision[collisionEnum::cube],
@@ -159,7 +161,7 @@ void getBlocksTextures()
     };
     blockIdDefinition[(size_t)BlockID::oak_leaves] = {
         blockTexture[(size_t)blockTextureEnum::oak_leaves], collision[collisionEnum::cube],
-        Shape::cube, collision[collisionEnum::cube], 1000, 0, true,
+        Shape::cube, collision[collisionEnum::cube], 250, 0, true,
         determinationRotationBlock::XYZFixed, tranparencyType::transparent
     };
     blockIdDefinition[(size_t)BlockID::gravel] = {
@@ -188,42 +190,60 @@ void getBlocksTextures()
     };
     blockIdDefinition[(size_t)BlockID::flower_allium] = {
         blockTexture[(size_t)blockTextureEnum::flower_allium], collision[collisionEnum::nothing],
-        Shape::flower, collision[collisionEnum::flower], 1000, 0, false,
+        Shape::flower, collision[collisionEnum::flower], FlowersEndurance, 0, false,
         determinationRotationBlock::XYZFixed, tranparencyType::transparent
     };
     blockIdDefinition[(size_t)BlockID::flower_blue_orchid] = {
         blockTexture[(size_t)blockTextureEnum::flower_blue_orchid], collision[collisionEnum::nothing],
-        Shape::flower, collision[collisionEnum::flower], 1000, 0, false,
+        Shape::flower, collision[collisionEnum::flower], FlowersEndurance, 0, false,
         determinationRotationBlock::XYZFixed, tranparencyType::transparent
     };
     blockIdDefinition[(size_t)BlockID::flower_dandelion] = {
         blockTexture[(size_t)blockTextureEnum::flower_dandelion], collision[collisionEnum::nothing],
-        Shape::flower, collision[collisionEnum::flower], 1000, 0, false,
+        Shape::flower, collision[collisionEnum::flower], FlowersEndurance, 0, false,
         determinationRotationBlock::XYZFixed, tranparencyType::transparent
     };
     blockIdDefinition[(size_t)BlockID::flower_houstonia] = {
         blockTexture[(size_t)blockTextureEnum::flower_houstonia], collision[collisionEnum::nothing],
-        Shape::flower, collision[collisionEnum::flower], 1000, 0, false,
+        Shape::flower, collision[collisionEnum::flower], FlowersEndurance, 0, false,
         determinationRotationBlock::XYZFixed, tranparencyType::transparent
     };
     blockIdDefinition[(size_t)BlockID::flower_oxeye_daisy] = {
         blockTexture[(size_t)blockTextureEnum::flower_oxeye_daisy], collision[collisionEnum::nothing],
-        Shape::flower, collision[collisionEnum::flower], 1000, 0, false,
+        Shape::flower, collision[collisionEnum::flower], FlowersEndurance, 0, false,
         determinationRotationBlock::XYZFixed, tranparencyType::transparent
     };
     blockIdDefinition[(size_t)BlockID::flower_paeonia] = {
         blockTexture[(size_t)blockTextureEnum::flower_paeonia], collision[collisionEnum::nothing],
-        Shape::flower, collision[collisionEnum::flower], 1000, 0, false,
+        Shape::flower, collision[collisionEnum::flower], FlowersEndurance, 0, false,
         determinationRotationBlock::XYZFixed, tranparencyType::transparent
     };
     blockIdDefinition[(size_t)BlockID::flower_tulip_white] = {
         blockTexture[(size_t)blockTextureEnum::flower_tulip_white], collision[collisionEnum::nothing],
-        Shape::flower, collision[collisionEnum::flower], 1000, 0, false,
+        Shape::flower, collision[collisionEnum::flower], FlowersEndurance, 0, false,
         determinationRotationBlock::XYZFixed, tranparencyType::transparent
     };
 
-    Image breakingAnimationImage = LoadImage("./textures/destroy_stage.png");
-    apply100TransparentShaders(breakingAnimationImage, breakingAnimation);
+    Image breakingAnimationImage = LoadImage("./textures/destroyBlockStages/destroy_stage_9.png");
+    apply100TransparentShaders(breakingAnimationImage, breakingAnimation[9]);
+    breakingAnimationImage = LoadImage("./textures/destroyBlockStages/destroy_stage_8.png");
+    apply100TransparentShaders(breakingAnimationImage, breakingAnimation[8]);
+    breakingAnimationImage = LoadImage("./textures/destroyBlockStages/destroy_stage_7.png");
+    apply100TransparentShaders(breakingAnimationImage, breakingAnimation[7]);
+    breakingAnimationImage = LoadImage("./textures/destroyBlockStages/destroy_stage_6.png");
+    apply100TransparentShaders(breakingAnimationImage, breakingAnimation[6]);
+    breakingAnimationImage = LoadImage("./textures/destroyBlockStages/destroy_stage_5.png");
+    apply100TransparentShaders(breakingAnimationImage, breakingAnimation[5]);
+    breakingAnimationImage = LoadImage("./textures/destroyBlockStages/destroy_stage_4.png");
+    apply100TransparentShaders(breakingAnimationImage, breakingAnimation[4]);
+    breakingAnimationImage = LoadImage("./textures/destroyBlockStages/destroy_stage_3.png");
+    apply100TransparentShaders(breakingAnimationImage, breakingAnimation[3]);
+    breakingAnimationImage = LoadImage("./textures/destroyBlockStages/destroy_stage_2.png");
+    apply100TransparentShaders(breakingAnimationImage, breakingAnimation[2]);
+    breakingAnimationImage = LoadImage("./textures/destroyBlockStages/destroy_stage_1.png");
+    apply100TransparentShaders(breakingAnimationImage, breakingAnimation[1]);
+    breakingAnimationImage = LoadImage("./textures/destroyBlockStages/destroy_stage_0.png");
+    apply100TransparentShaders(breakingAnimationImage, breakingAnimation[0]);
 
     Image atlasImage = LoadImage("textures/atlas_0.png");
     apply100TransparentShaders(atlasImage, atlas);

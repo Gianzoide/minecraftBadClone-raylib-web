@@ -25,7 +25,7 @@ void DrawCrosshair()
     DrawRectangle(cx - size, cy - thickness / 2, size * 2, thickness, BLACK); // horizontal
 }
 
-float scale = 2.0f;
+float scale = 2.0f;   // mantenha inteiro (2, 3, 4...) para o filtro nearest ficar nítido
 float spaceFromBottom = 0.975f;
 float divideInHand = WindowSizeY / 8;
 
@@ -48,9 +48,10 @@ float bruhZMomentZZZ = 0.0015;
 
 // Câmera isométrica olhando de (+X, +Y, +Z), com Z para cima.
 // Faces visíveis: X+ (direita), Y+ (esquerda) e topo.
-// Um cubo unitário vira um hexágono de largura 2 e altura 2 (unidades projetadas).
+// Proporção igual à do Minecraft (yaw 45°, pitch 30°): o cubo fica um pouco
+// mais alto que a projeção 2:1 (fator 1.2247 = 1 / cos(35.26°)... aproximado).
 static inline Vector2 IsoProject(const Vector3& v) {
-    return { v.x - v.y, (v.x + v.y) * 0.5f - v.z };
+    return { v.x - v.y, (v.x + v.y) * 0.5f - v.z * 1.2247f };
 }
 
 // UV local (0..1) de um vértice dentro da face. Os índices seguem a ordem
@@ -151,7 +152,8 @@ void DrawIsoCube(BlockID id, Vector2 pos, float size, Texture2D& theAtlas)
         return a.depth / 4.0f < b.depth / 4.0f;
         });
 
-    // formas mais altas/largas que um cubo (fogo) são reduzidas e centralizadas
+    // formas mais altas/largas que um cubo (fogo, cubo com proporção do Minecraft)
+    // são reduzidas e centralizadas
     float spanX = maxX - minX;
     float spanY = maxY - minY;
     float k = min(1.0f, min(2.0f / spanX, 2.0f / spanY));
@@ -167,8 +169,9 @@ void DrawIsoCube(BlockID id, Vector2 pos, float size, Texture2D& theAtlas)
         rlColor4ub(o.color.r, o.color.g, o.color.b, o.color.a);
         for (int i = 0; i < 4; i++) {
             rlTexCoord2f(o.uv[i].x, o.uv[i].y);
-            rlVertex2f(center.x + (o.p[i].x + offset.x) * k * h,
-                center.y + (o.p[i].y + offset.y) * k * h);
+            // vértices em pixels inteiros: bordas coincidem, sem frestas entre faces
+            rlVertex2f(roundf(center.x + (o.p[i].x + offset.x) * k * h),
+                roundf(center.y + (o.p[i].y + offset.y) * k * h));
         }
     }
     rlEnd();
@@ -176,99 +179,26 @@ void DrawIsoCube(BlockID id, Vector2 pos, float size, Texture2D& theAtlas)
 }
 
 // ============================================================
-//  Ícones com supersampling (render grande -> redução suave)
+//  Ícones 3D: desenho direto, filtro POINT (igual ao Minecraft)
 // ============================================================
-// Por que isso: num ícone de ~30px a textura de 16px fica espremida. Na projeção
-// isométrica o topo é achatado na vertical (cada texel ocupa ~0.4px de altura),
-// então com amostragem direta o topo perde informação e serrilha.
-// Aqui cada bloco é desenhado numa textura grande (ICON_SUPERSAMPLE x o tamanho
-// na tela) com filtro POINT, e depois reduzida com mipmap, que faz a média dos
-// texels. Resultado: topo e laterais com a mesma qualidade, sem serrilhado.
-constexpr int ICON_SUPERSAMPLE = 8;   // 4 = mais leve, 8 = mais liso, 16 = máximo
-
-static RenderTexture2D iconCache[(size_t)BlockID::COUNT];
-static bool iconReady[(size_t)BlockID::COUNT] = {};
-static int iconRes = 0;
-
-static int NextPow2(int v) { int p = 1; while (p < v) p <<= 1; return p; }
-
-static void SetAtlasFilterPoint() { SetTextureFilter(atlas, TEXTURE_FILTER_POINT); }
-static void RestoreAtlasFilter() {
-#ifndef PLATFORM_WEB
-    SetTextureFilter(atlas, TEXTURE_FILTER_ANISOTROPIC_16X);
-#endif
-}
-
-void UnloadItemIcons()
-{
-    for (size_t i = 0; i < (size_t)BlockID::COUNT; i++) {
-        if (iconReady[i]) UnloadRenderTexture(iconCache[i]);
-        iconReady[i] = false;
-    }
-}
-
-// Opcional (os ícones também são criados sob demanda). Mantida para compatibilidade.
-void PreRenderItemIcons() {}
-
-static void BuildIcon(BlockID id, int res)
-{
-    size_t i = (size_t)id;
-
-    rlDrawRenderBatchActive();
-    SetAtlasFilterPoint();
-
-    iconCache[i] = LoadRenderTexture(res, res);
-    BeginTextureMode(iconCache[i]);
-    ClearBackground(BLANK);
-    DrawIsoCube(id, { 0, 0 }, (float)res, atlas);
-    EndTextureMode();
-
-    RestoreAtlasFilter();
-
-    //GenTextureMipmaps(&iconCache[i].texture);
-    SetTextureFilter(iconCache[i].texture, TEXTURE_FILTER_TRILINEAR);
-    iconReady[i] = true;
-}
-
-static void DrawCachedIcon(BlockID id, Vector2 pos, float size)
-{
-    RenderTexture2D& rt = iconCache[(size_t)id];
-    Rectangle src = { 0, 0, (float)rt.texture.width, -(float)rt.texture.height }; // RT vem de cabeça para baixo
-    Rectangle dst = { roundf(pos.x), roundf(pos.y), roundf(size), roundf(size) };
-
-    // o mipmap mistura cor com transparente -> alpha pré-multiplicado evita borda escura
-    BeginBlendMode(BLEND_ALPHA_PREMULTIPLY);
-    DrawTexturePro(rt.texture, src, dst, { 0, 0 }, 0.0f, WHITE);
-    EndBlendMode();
-}
-
-// Fogo é animado (o atlas muda todo frame), então não usa cache.
-static void DrawIsoCubeLive(BlockID id, Vector2 pos, float size)
-{
-    rlDrawRenderBatchActive();
-    SetAtlasFilterPoint();
-    DrawIsoCube(id, { roundf(pos.x), roundf(pos.y) }, roundf(size), atlas);
-    rlDrawRenderBatchActive();
-    RestoreAtlasFilter();
-}
+// Sem cache, sem supersampling e sem mipmap: o bloco é desenhado direto na
+// tela, no tamanho final, com filtro nearest. Cada texel vira pixels nítidos.
+// Como o desenho é ao vivo, fogo (animado) funciona sem tratamento especial.
+void UnloadItemIcons() {}        // mantida p/ compatibilidade
+void PreRenderItemIcons() {}     // mantida p/ compatibilidade
 
 static void DrawIsoIcon(BlockID id, Vector2 pos, float size)
 {
-    if (blockIdDefinition[id].shapeTexture == Shape::fire) {
-        DrawIsoCubeLive(id, pos, size);
-        return;
-    }
+    rlDrawRenderBatchActive();
+    SetTextureFilter(atlas, TEXTURE_FILTER_POINT);
 
-    // resolução do cache acompanha o `scale` da UI (recria se ele mudar)
-    int wanted = NextPow2((int)ceilf(TILE_SIZE * scale * ICON_SUPERSAMPLE));
-    if (wanted > 1024) wanted = 1024;
-    if (wanted != iconRes) {
-        UnloadItemIcons();
-        iconRes = wanted;
-    }
+    // tamanho e posição em pixels inteiros: texels ficam nítidos
+    DrawIsoCube(id, { roundf(pos.x), roundf(pos.y) }, roundf(size), atlas);
 
-    if (!iconReady[(size_t)id]) BuildIcon(id, iconRes);
-    DrawCachedIcon(id, pos, size);
+    rlDrawRenderBatchActive();
+#ifndef PLATFORM_WEB
+    SetTextureFilter(atlas, TEXTURE_FILTER_ANISOTROPIC_16X);
+#endif
 }
 
 // Item plano (sprite 2D) do atlas
@@ -468,7 +398,8 @@ void drawHotbar() {
     };
     DrawTextureEx(texturesGUI[1], selectedPos, 0.0f, scale, WHITE);
 
-    float itemslotScale = 0.9f;
+    // tamanho cheio do ícone (inteiro) para o nearest não ficar irregular
+    float itemslotScale = 1.0f;
 
     // Itens da hotbar (3D e 2D no mesmo loop)
     for (const ItemInfo& item : main_player->inventory)

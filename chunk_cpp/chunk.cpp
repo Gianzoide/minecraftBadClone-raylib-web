@@ -177,48 +177,26 @@ vector<blockOfstructureInfo> treeStructure = {
 										{BlockID::oak_leaves, { 0, 1,6} }, 
 };
 
-#include <unordered_set>
-
-struct int3DStructure
-{
-	int x, y, z;
-	bool operator==(const int3DStructure& other) const
-	{
-		return x == other.x &&
-			y == other.y &&
-			z == other.z;
-	}
-};
-struct int3DStructureHash
-{
-	size_t operator()(const int3DStructure& pos) const
-	{
-		return std::hash<int>()(pos.x) ^
-			(std::hash<int>()(pos.y) << 1) ^
-			(std::hash<int>()(pos.z) << 2);
-	}
-};
-std::unordered_set<int3DStructure, int3DStructureHash> structures;
+unordered_set<int3DStructure, int3DStructureHash> structures; // what chunks in the worlds have structures to be placed
 
 void preparingStructureToBePLaced(int3D& chunkCoord, int3D& structureStartPos)
 {
 	for (const blockOfstructureInfo& bloc : treeStructure)
 	{
-		blockOfstructureInfo newBlock;
+		int3DStructure_Block newBlock;
 		newBlock.blockId = bloc.blockId;
-		newBlock.coords = {
-			bloc.coords.x + structureStartPos.x,
-			bloc.coords.y + structureStartPos.y,
-			bloc.coords.z + structureStartPos.z
-		};
+		newBlock.x = bloc.coords.x + structureStartPos.x;
+		newBlock.y = bloc.coords.y + structureStartPos.y;
+		newBlock.z = bloc.coords.z + structureStartPos.z;
+
 		int3D targetChunk = chunkCoord;
 
-		while (newBlock.coords.x < 0            ){newBlock.coords.x += chunkXlength;targetChunk.x--;}
-		while (newBlock.coords.x >= chunkXlength){newBlock.coords.x -= chunkXlength;targetChunk.x++;}
-		while (newBlock.coords.y < 0            ){newBlock.coords.y += chunkYlength;targetChunk.y--;}
-		while (newBlock.coords.y >= chunkYlength){newBlock.coords.y -= chunkYlength;targetChunk.y++;}
-		while (newBlock.coords.z < 0            ){newBlock.coords.z += chunkZlength;targetChunk.z--;}
-		while (newBlock.coords.z >= chunkZlength){newBlock.coords.z -= chunkZlength;targetChunk.z++;}
+		while (newBlock.x < 0            ){newBlock.x += chunkXlength;targetChunk.x--;}
+		while (newBlock.x >= chunkXlength){newBlock.x -= chunkXlength;targetChunk.x++;}
+		while (newBlock.y < 0            ){newBlock.y += chunkYlength;targetChunk.y--;}
+		while (newBlock.y >= chunkYlength){newBlock.y -= chunkYlength;targetChunk.y++;}
+		while (newBlock.z < 0            ){newBlock.z += chunkZlength;targetChunk.z--;}
+		while (newBlock.z >= chunkZlength){newBlock.z -= chunkZlength;targetChunk.z++;}
 		
 		Chunk* targetChunkPtr = getChunk(targetChunk.x, targetChunk.y, targetChunk.z);
 
@@ -229,7 +207,7 @@ void preparingStructureToBePLaced(int3D& chunkCoord, int3D& structureStartPos)
 			targetChunkPtr = getChunk(targetChunk.x, targetChunk.y, targetChunk.z);
 		}
 		structures.insert(int3DStructure{ targetChunk.x, targetChunk.y, targetChunk.z});
-		targetChunkPtr->structureToBePlaced.push_back(newBlock);
+		targetChunkPtr->structureToBePlaced.insert(newBlock);
 	}
 }
 
@@ -310,18 +288,25 @@ BlockID whatBlockToCreate(
 }
 
 void placingTheStructure(Chunk& chunk) {
-	// placing structures
 	ChunkBlocks& allBlocks = chunk.blocks;
-	int3D chunkCoordMultiplyed = { chunk.x * chunkXlength, chunk.y * chunkYlength, chunk.z * chunkZlength};
-	for (blockOfstructureInfo& block : chunk.structureToBePlaced) {
-		int3D& coordBlock = block.coords;
-		auto& theCoord = allBlocks[Index(coordBlock.x, coordBlock.y, coordBlock.z)];
+
+	int3D chunkCoordMultiplyed = {chunk.x * chunkXlength, chunk.y * chunkYlength, chunk.z * chunkZlength};
+
+	for (const int3DStructure_Block& block : chunk.structureToBePlaced) {
+		int3D coordBlock = { block.x, block.y, block.z };
+
+		auto& theCoord = allBlocks[
+			Index(coordBlock.x, coordBlock.y, coordBlock.z)
+		];
+
 		if (theCoord.id == Air) {
 			int3D bruh = { chunkCoordMultiplyed.x + coordBlock.x, chunkCoordMultiplyed.y + coordBlock.y, chunkCoordMultiplyed.z + coordBlock.z };
+
 			theCoord = blockInfo{ block.blockId, getBlockDetermedRotation(blockIdDefinition[block.blockId].rotationDetermination, bruh) };
 		}
 	}
-	chunk.structureToBePlaced = {};
+
+	chunk.structureToBePlaced.clear();
 }
 
 void createChunk(int x, int y, int z)
@@ -442,27 +427,19 @@ mutex gottenChunks2Mutex;
 bool threading123 = false;
 
 void threadCreateChunksAndMeshes(vector<int3D> createChunks, vector<int3D> createMeshes, int3D centerSnapshot) {
-	vector<int3D> fineshedCreating{};
-	vector<int3D> fineshedMeshing{};
 
 	int3D toBeginningCoord = { 
 		centerSnapshot.x - renderDistanceDiameterHalfed,
 		centerSnapshot.y - renderDistanceDiameterHalfed,
 		centerSnapshot.z - renderDistanceDiameterHalfed
 	};
-
 	for (int3D indexedCoord : createChunks) {
 		int3D chunkCoord = { 
 			toBeginningCoord.x + indexedCoord.x, 
 			toBeginningCoord.y + indexedCoord.y, 
 			toBeginningCoord.z + indexedCoord.z 
 		};
-		createChunk(
-			chunkCoord.x,
-			chunkCoord.y,
-			chunkCoord.z
-		);
-		fineshedCreating.push_back(int3D{ indexedCoord.x, indexedCoord.y, indexedCoord.z });
+		createChunk(chunkCoord.x, chunkCoord.y, chunkCoord.z);
 	}
 
 	for (int3D gottenChunkCoord : createMeshes) {
@@ -472,16 +449,22 @@ void threadCreateChunksAndMeshes(vector<int3D> createChunks, vector<int3D> creat
 			toBeginningCoord.z + gottenChunkCoord.z
 		};
 		createMeshFaces_ofAChunk(gottenChunkCoord, chunkCoord);
-
-		fineshedMeshing.push_back(int3D{ gottenChunkCoord.x, gottenChunkCoord.y, gottenChunkCoord.z });
 	}
 	lock_guard<mutex> lock(gottenChunks2Mutex);
-	for (int3D coords : fineshedCreating) {
-		gottenChunks[coords.x][coords.y][coords.z] = gottenchunksStates::update;
+	for (int3D coords : createChunks) {
+		int3D diffCentCor = { centerSnapshot.x - CenterCoords.x, centerSnapshot.y - CenterCoords.y, centerSnapshot.z - CenterCoords.z };
+		if (diffCentCor.x < 0 || diffCentCor.x > renderDistanceDiameter ||
+			diffCentCor.y < 0 || diffCentCor.y > renderDistanceDiameter ||
+			diffCentCor.z < 0 || diffCentCor.z > renderDistanceDiameter 
+			) {
+			continue;
+		}
+		gottenChunks[coords.x + diffCentCor.x][coords.y + diffCentCor.y][coords.z + diffCentCor.z] = gottenchunksStates::update;
 	}
-	for (int3D coords : fineshedMeshing) {
+	for (int3D coords : createMeshes) {
 		gottenChunks[coords.x][coords.y][coords.z] = gottenchunksStates::done;
 	}
+
 	cout << endl << "Fineshed threading.";
 	threading123 = false;
 }
@@ -553,7 +536,6 @@ void chunk()
 	{
 		pushingThe3DLists(dx, dy, dz);
 	}
-	int halfed = renderDistanceDiameterHalfed + 1;
 
 	for (int x = 0; x < renderDistanceDiameter; x++){
 		for (int y = 0; y < renderDistanceDiameter; y++){
@@ -564,11 +546,40 @@ void chunk()
 				{
 					toCreateChunks.push_back(int3D{ x, y, z });
 					gottenState = gottenchunksStates::loadingCreating;
-				}
+				}else
 				if (gottenState == gottenchunksStates::update)
 				{
 					toCreateMeshes.push_back(int3D{ x, y, z });
 					gottenState = gottenchunksStates::loadingUpdate;
+				} else
+				if(gottenState == gottenchunksStates::done){
+					//update blocking animation
+					Chunk* chunkToBreakingThing = getChunk(
+						x + CenterCoords.x - renderDistanceDiameterHalfed,
+						y + CenterCoords.y - renderDistanceDiameterHalfed,
+						z + CenterCoords.z - renderDistanceDiameterHalfed
+					);
+					for (auto it = chunkToBreakingThing->actionsToBeMade.begin();
+						it != chunkToBreakingThing->actionsToBeMade.end();) {
+						auto& breaking = *it;
+
+						if (breaking.typeOfAction == actionType::breakingBlock) {
+							auto value = std::any_cast<std::shared_ptr<int>>(
+								&breaking.actionData
+							);
+
+							if (value && *value) {
+								BlockID blockId = chunkToBreakingThing->blocks[ Index(breaking.x, breaking.y, breaking.z) ].id;
+								**value += 4;
+								//cout << endl << "**value: " << **value << endl << "endurance :" << blockIdDefinition[blockId].endurance;
+								if (**value >= blockIdDefinition[blockId].endurance) {
+									it = chunkToBreakingThing->actionsToBeMade.erase(it);
+									continue;
+								}
+							}
+						}
+						++it;
+					}
 				}
 			}
 		}

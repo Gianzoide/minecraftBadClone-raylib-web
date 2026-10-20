@@ -142,7 +142,7 @@ int main() {
         Vector3{ (float)0.0 * chunkXlength, (float)0 * chunkYlength, (float)0.8 * chunkZlength },// position
         collisionBox{ /*size*/{0.6,0.6,1.8}, /*start coords*/{0.2,0.2,0}},    // collision box
         0,                                                                    // skin
-        5.0f,                                                                 // reach
+        15.0f,                                                                 // reach
         Vector3{ 0.5f, 0.5f, 1.5f }                                           // camera vision
     ));
     main_player = entities.front().get();

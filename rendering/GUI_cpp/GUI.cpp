@@ -20,7 +20,7 @@ void getFromFolderGUI_Textures() {
 
 }
 int WindowSizeX = 1000;
-int WindowSizeY = 600;
+int WindowSizeY = 700;
 bool inventoryopened = false;
 bool f3Activated = true;
 

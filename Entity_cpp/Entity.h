@@ -40,7 +40,7 @@ public:
     int /*place holder*/ skin = 0;
     Vector3 Velocity = {0.0, 0.0, 0.0};
     bool isGrounded = false;
-    float reachabilityDistance = 3.0;
+    float reachabilityDistance = 5.0;
     Vector3 cameraVisionposition;
     list<ItemInfo> inventory = {};
     int hotbarSlotBeeningUsed = 0;

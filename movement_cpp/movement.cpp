@@ -47,7 +47,7 @@ void updateMovement(Camera3D& camera, Entity* main_player) {
 
     // SETTINGS
     float baseSpeed = 5.0f;
-    float sprintBonus = IsKeyDown(KEY_CAPS_LOCK) ? 20.0f : 0.0f;
+    float sprintBonus = IsKeyDown(KEY_CAPS_LOCK) ? 30.0f : 0.0f;
     float gravity = 29.0f;
     float jumpStrength = 8.0f;
     PlayerGamemode playersMode = main_player->gamemode;

@@ -78,7 +78,9 @@ struct texturesAtlas {
 };
 
 extern texturesAtlas textureAtlas;
-extern Texture2D breakingAnimation;
+//extern Texture2D breakingAnimation;
+extern std::array<Texture2D, 10> breakingAnimation;
+
 
 extern EnumArray<collisionEnum, collisionBoxes, (size_t)collisionEnum::COUNT> collision;
 

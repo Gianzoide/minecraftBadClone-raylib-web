@@ -8,7 +8,8 @@
 #include <cfloat>
 #include "../movement_cpp/movement.h"
 #include "../particles_cpp/particles.h"
-
+#include <any>
+#include <memory>
 using namespace std;
 
 vector<int3D> getChunkThatEntitySees(
@@ -154,24 +155,38 @@ bool checkIfItsTheClosest(
 }
 
 void updateRenderingAdjecentChunks(int3D chunk, Vector3 blockCoord){
-    gottenChunks[chunk.x][chunk.y][chunk.z] = gottenchunksStates::update;
+    if (gottenChunks[chunk.x][chunk.y][chunk.z] == gottenchunksStates::done) {
+        gottenChunks[chunk.x][chunk.y][chunk.z] = gottenchunksStates::update;
+    }
     if (blockCoord.x >= chunkXlength - 1 && !(chunk.x >= renderDistanceDiameter - 1)) { //x
-        gottenChunks[chunk.x + 1][chunk.y    ][chunk.z    ] = gottenchunksStates::update;
+        if (gottenChunks[chunk.x + 1][chunk.y][chunk.z] == gottenchunksStates::done) {
+            gottenChunks[chunk.x + 1][chunk.y][chunk.z] = gottenchunksStates::update;
+        }
     }
     if (blockCoord.x <= 0 && !(chunk.x <= 0)) {
-        gottenChunks[chunk.x - 1][chunk.y    ][chunk.z    ] = gottenchunksStates::update;
+        if (gottenChunks[chunk.x - 1][chunk.y][chunk.z] == gottenchunksStates::done) {
+            gottenChunks[chunk.x - 1][chunk.y][chunk.z] = gottenchunksStates::update;
+        }
     }
     if (blockCoord.y >= chunkYlength - 1 && !(chunk.y >= renderDistanceDiameter - 1)) { //y
-        gottenChunks[chunk.x    ][chunk.y + 1][chunk.z    ] = gottenchunksStates::update;
+        if (gottenChunks[chunk.x][chunk.y + 1][chunk.z] == gottenchunksStates::done) {
+            gottenChunks[chunk.x][chunk.y + 1][chunk.z] = gottenchunksStates::update;
+        }
     }
     if (blockCoord.y <= 0 && !(chunk.y <= 0)) {
-        gottenChunks[chunk.x    ][chunk.y - 1][chunk.z    ] = gottenchunksStates::update;
+        if (gottenChunks[chunk.x][chunk.y - 1][chunk.z] == gottenchunksStates::done) {
+            gottenChunks[chunk.x][chunk.y - 1][chunk.z] = gottenchunksStates::update;
+        }
     }
     if (blockCoord.z >= chunkZlength - 1 && !(chunk.z >= renderDistanceDiameter - 1)) { //z
-        gottenChunks[chunk.x    ][chunk.y    ][chunk.z + 1] = gottenchunksStates::update;
+        if (gottenChunks[chunk.x][chunk.y][chunk.z + 1] == gottenchunksStates::done) {
+            gottenChunks[chunk.x][chunk.y][chunk.z + 1] = gottenchunksStates::update;
+        }
     }
     if (blockCoord.z <= 0 && !(chunk.z <= 0)) {
-        gottenChunks[chunk.x    ][chunk.y    ][chunk.z - 1] = gottenchunksStates::update;
+        if (gottenChunks[chunk.x][chunk.y][chunk.z - 1] == gottenchunksStates::done) {
+            gottenChunks[chunk.x][chunk.y][chunk.z - 1] = gottenchunksStates::update;
+        }
     }
 }
 
@@ -333,42 +348,37 @@ void hoveringBlock(Entity& entity)
             if (Left_Clicked) {
                 createParticles(chunkCoord, baseCoord, closestBlockIt->id);
             }
-            BlockID blockIdToBreakingAnimation = closestChunk->blocks[closestBlockItCoord].id;
-            Shape shapeToAnimation = blockIdDefinition[blockIdToBreakingAnimation].shapeTexture;
-            blockyTexture textureToAnimation = blockIdDefinition[blockIdToBreakingAnimation].texture;
-            Rotation rotationBlock = closestChunk->blocks[closestBlockItCoord].rotation;
-
-            uint8_t i = 0;
-            for (auto& faces : ChooseshapeToRender[(int)shapeToAnimation]) {
-                AtlasTile textureDirection = AtlasTile{0,0,1,1};
-                for (SquareFace& face : faces) {
-
-                    auto fac = face.face;
-                    for (int v = 0; v < 4; v++) {
-
-                        fac[v] = rotateXYZ_centered(
-                            fac[v],
-                            rotX(rotationBlock),
-                            rotY(rotationBlock),
-                            rotZ(rotationBlock)
-                        );
+            int breakingForceOfPlayer = 1900;
+            //cout << endl << "nigger";
+            auto it = closestChunk->actionsToBeMade.find(int3DAction{ littleBruh.x, littleBruh.y, littleBruh.z });
+            if (it != closestChunk->actionsToBeMade.end()) {
+                if (it->typeOfAction == actionType::breakingBlock) {
+                    
+                    auto value = std::any_cast<std::shared_ptr<int>>(it->actionData);
+                    //cout << endl << *value;
+                    *value -= breakingForceOfPlayer;
+                    if (*value <= 0) {
+                        createParticles(chunkCoord, baseCoord, closestBlockIt->id);
+                        closestChunk->blocks[Index(it->x, it->y, it->z)] = blockInfo{};
+                        closestChunk->actionsToBeMade.erase(it);
+                        updateRenderingAdjecentChunks(rendercoordChunk, baseCoord);
                     }
-                    // 2. Calculate the normal AFTER rotation
-                    Vector3 edge1 = Vector3Subtract(fac[1], fac[0]);
-                    Vector3 edge2 = Vector3Subtract(fac[2], fac[0]);
-
-                    Vector3 faceNormal = Vector3Normalize(Vector3CrossProduct(edge1, edge2));
-                    Vector3 offset = Vector3Scale(faceNormal, 0.01f);
-
-                    for (int v = 0; v < 4; v++) {
-                        fac[v] = Vector3Add(fac[v], offset);
-                        fac[v] = Vector3Add(fac[v], baseCoord); 
-                        fac[v] = Vector3Add(fac[v], chunkCoordToTheRender);
-                    }
-                    DrawItemFace(fac[0],fac[1],fac[2],fac[3],textureDirection, breakingAnimation);
                 }
-                i++;
             }
+            else {
+                int blockEndurance = blockIdDefinition[closestChunk->blocks[Index(littleBruh.x, littleBruh.y, littleBruh.z)].id].endurance;
+                if (breakingForceOfPlayer >= blockEndurance) {
+                    createParticles(chunkCoord, baseCoord, closestBlockIt->id);
+                    closestChunk->blocks[Index(littleBruh.x, littleBruh.y, littleBruh.z)] = blockInfo{};
+                    updateRenderingAdjecentChunks(rendercoordChunk, baseCoord);
+                }
+                else {
+                    closestChunk->actionsToBeMade.insert(int3DAction{ littleBruh.x, littleBruh.y, littleBruh.z, actionType::breakingBlock, std::make_shared<int>(
+                         blockEndurance - breakingForceOfPlayer
+                    ) }); 
+                }
+            }
+            
         }
     }
 
